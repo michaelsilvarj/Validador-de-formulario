@@ -1,37 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Validador de Formulário</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
     <div class="screen">
-        <div class="leftSide">
-            <img src="img/financial_data.png" alt="">
+        <div class="leftside">
+            <img src="img/financial_data.png" alt="" />
         </div>
-        <div class="rightSide">
-            <h1>Crie um Formulário</h1>
-            <form action="POST" action="cadastro.php" class="validator">
-                <label >Seu Nome: <br>
-                    <input type="text" name="nome" placeholder="Digite seu nome ..." data-rules="required|min=2">
-                </label>
-                <label >Seu E-Mail: <br>
-                    <input type="text" name="email" placeholder="Digite seu E-Mail ...">
-                </label>
-                <label >Sua Senha: <br>
-                    <input type="password" name="password" placeholder="Digite sua senha ...">
+        <div class="rightside">
+            <h1>Crie uma conta</h1>
+
+            <form method="POST" action="cadastro.php" class="b7validator">
+                <label>
+                    Seu nome:<br/>
+                    <input type="text" name="name" data-rules="required|min=2" />
                 </label>
                 <label>
-                    <input type="submit" value="cadastrar">
-                </label>                
+                    Seu e-mail:<br/>
+                    <input type="text" name="email" data-rules="required|email" />
+                </label>
+                <label>
+                    Sua senha:<br/>
+                    <input type="password" name="password" data-rules="min=4" />
+                </label>
+                <label>
+                    <input type="submit" value="Cadastrar" />
+                </label>
             </form>
-            <div>Já tem uma conta ?<a href="">Faça o login</a></div>
+
+            <div>
+                Já tem uma conta? <a href="">Faça o Login</a>
+            </div>
         </div>
     </div>
-    
+
     <script src="script/script.js"></script>
 </body>
 </html>
